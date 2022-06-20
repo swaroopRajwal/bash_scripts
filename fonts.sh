@@ -8,7 +8,7 @@ files=`ls fonts/*.zip`
 for entry in $files
 do
   file_name=$(basename "$entry")
-  font_dir="/home/swaroop/.local/share/fonts/${file_name%.*}"
+  font_dir="/home/$USER/.local/share/fonts/${file_name%.*}"
 
   echo $(mkdir "$font_dir")
   echo $(unzip $entry -d $font_dir)
